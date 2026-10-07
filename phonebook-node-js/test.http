@@ -1,0 +1,20 @@
+### 1. Get all persons
+GET http://localhost:3001/api/persons
+
+### 2. Get info page
+GET http://localhost:3001/api/info
+
+### 3. Get single person by ID
+GET http://localhost:3001/api/persons/1
+
+### 4. Add new person (POST)
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "Kyaw Kyaw",
+  "number": "09-123456789"
+}
+
+### 5. Delete person
+DELETE http://localhost:3001/api/persons/5
