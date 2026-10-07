@@ -2,7 +2,7 @@ import express from 'express'
 import morgan from 'morgan';
 const app = express()
 const router = express.Router()
-const PORT = 3001
+const PORT = process.env.PORT || 3001
 app.use(express.json())
 
 const data = [
