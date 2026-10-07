@@ -1,5 +1,5 @@
 ### 1. Get all persons
-GET http://localhost:3001/api/persons
+GET https://phonebook-backend-khali.fly.dev/api/persons
 
 ### 2. Get info page
 GET http://localhost:3001/api/info
