@@ -18,7 +18,10 @@ const PersonSchema = new mongoose.Schema({
         type: String,
         required: true,
         minLength: 8,
-        match: [/^\d{2,3}-\d{4,7}$/, 'please provide valid ph number']
+        match: [
+            /^\d{2,3}-\d{6,}$/,
+            'please provide valid ph number'
+        ]
     }
 })
 
