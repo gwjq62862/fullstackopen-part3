@@ -1,6 +1,7 @@
 {
   "name": "phonebook",
   "version": "1.0.0",
+  "type": "module",
   "description": "this application is nodejs application for phoenbook ",
   "main": "index.js",
   "scripts": {
@@ -10,7 +11,10 @@
   "author": "Khali",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.7",
     "express": "^5.2.1",
+    "mongoose": "^9.11.1",
     "morgan": "^1.12.1"
   }
 }
