@@ -1,18 +1,26 @@
 import mongoose from 'mongoose';
 
 
-const password = process.argv[2]
-const url = `mongodb+srv://phyoheinway_db_user:${password}@cluster0.sskuhal.mongodb.net`
+//const password = process.argv[2]
+//const url = `mongodb+srv://phyoheinway_db_user:${password}@cluster0.sskuhal.mongodb.net`
 
 mongoose.set('strictQuery', false)
 //mongoose.connect(url)//
 
 
 const PersonSchema = new mongoose.Schema({
-    name: String,
-    number: String,
+    name: {
+        type: String,
+        required: true,
+        minLength: 3
+    },
+    number: {
+        type: String,
+        required: true,
+        minLength: 8,
+        match: [/^\d{2,3}-\d{4,7}$/, 'please provide valid ph number']
+    }
 })
-
 
 export const Person = mongoose.model('Person', PersonSchema)
 
